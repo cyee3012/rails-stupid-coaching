@@ -1,0 +1,16 @@
+<h1>The Coach's answer</h1>
+
+<h2>You:</h2>
+<%= params[:question] %>
+
+<h2>Coach:</h2>
+<%= @answer %>
+
+<h2>Ask another question?</h2>
+
+<form action="/answer" method="get">
+  <input type="text" name="question" placeholder="What's your question?">
+  <input type="submit" value="Ask!">
+</form>
+
+<p><%= link_to "Back to home", root_path %></p>
